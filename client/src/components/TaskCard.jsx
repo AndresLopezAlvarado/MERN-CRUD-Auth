@@ -12,7 +12,12 @@ export function TaskCard({ task }) {
       <header className="flex justify-between">
         <h1 className="text-2xl font-bold">{task.title}</h1>
         <div className="flex gap-x-2 items-center">
-          <Link to={`/tasks/${task._id}`} className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-md">Edit</Link>
+          <Link
+            to={`/tasks/${task._id}`}
+            className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-md"
+          >
+            Edit
+          </Link>
           <button
             onClick={() => {
               deleteTask(task._id);
@@ -28,4 +33,3 @@ export function TaskCard({ task }) {
     </div>
   );
 }
-
